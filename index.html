@@ -8,23 +8,91 @@
 <link rel="stylesheet" href="css/fa/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+
+var menuopen=0;
+$(document).ready(function(){
+    $("#menubar").click(function(){
+        
+		if(!menuopen){
+			$("#menu").show();
+			$('.menupanel').each(function(){
+				$(this).removeClass('width0').addClass('width100');
+			});
+			menuopen=1;
+		}
+		else{
+			$('.menupanel').each(function(){
+				$(this).removeClass('width100').addClass('width0');
+			});
+			
+			setTimeout(function(){
+				$("#menu").hide();
+			}, 550);
+			menuopen=0;
+		}
+    });
+});
+</script>
+
+<style>
+
+	#menu{
+		background: transparent;
+	}
+	
+	#menu div{
+		background: transparent;
+	}
+	
+	.psuedopanel{
+		background: transparent;
+	}
+	
+	.width0{
+		width: 0px;
+	}
+	
+	.width100{
+		width: 100%;
+	}
+	
+	.menupanel{
+		transition: width 0.5s linear;
+	}
+</style>
 <body>
-
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
+	<div class="w3-display-topleft" id="menubar" style="margin-left:20px;margin-top:20px;z-index:1000;">
+		<div style="border-radius:5px;background-color:white;box-shadow:5px 5px 5px black;border-top:1px solid grey;border-left:1px solid grey;">
+			<i class="fa fa-bars" style="font-size:30px;color:black;padding:15px;"></i>
+		</div>
+	</div>
+	
+<!-- Menubar -->
+<div id="menu" class="w3-white" style="display:none;position:fixed;top:0px;width:100%;height:100%;z-index:999;">
+	<div class="w3-row w3-text-white">
+		<div class="w3-col l3 psuedopanel">
+			<div class="width0 menupanel w3-black" style="height:100vh;">Hello 1</div>
+		</div>
+		<div class="w3-col l3 psuedopanel">
+			<div class="width0 menupanel w3-black" style="height:100vh;">Hello 1</div>
+		</div>
+		<div class="w3-col l3 psuedopanel">
+			<div class="width0 menupanel w3-black" style="height:100vh;">Hello 1</div>
+		</div>
+		<div class="w3-col l3 psuedopanel">
+			<div class="width0 menupanel w3-black" style="height:100vh;">Hello 1</div>
+		</div>
+		
+	</div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
 
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
 
-	<div class="w3-display-topleft" style="margin-left:20px;margin-top:20px;">
-		<div style="border-radius:5px;background-color:white;box-shadow:5px 5px 5px black;border-top:1px solid grey;border-left:1px solid grey;">
-			<i class="fa fa-bars" style="font-size:30px;color:black;padding:15px;"></i>
-		</div>
-	</div>
-	
+
   <div class="w3-display-middle" style="white-space:nowrap; left: 5%;">
     <!--<span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span> -->
 	<div id="s-m1">
