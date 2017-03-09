@@ -134,7 +134,7 @@ div.btnbg {
 #c-s1{
     transform: rotate(45deg);
     position: absolute;
-    margin-top: -50px;
+    margin-top: -51px;
     border-top-color: black;
     border-radius: 1000px 100px 1000px 1000px;
 		margin-right:10px;
@@ -156,7 +156,10 @@ div.btnbg {
 
 #l-e1{
 	margin-right:11px;
-	border-radius:5px 5px 0px 0px;
+	margin-left:3px;
+	border-radius:5px 5px 5px 5px;
+	transform: scaleY(0.99);
+	margin-top:1px;
 }
 
 #l-e2{
@@ -218,7 +221,7 @@ div.btnbg {
 	margin-right:-5px;
 	transform: rotate(90deg)  scaleY(0.6);;
 	border-radius:5px 5px 5px 5px;
-	margin-top:43px;
+	margin-top:42px;
    position: absolute;
    	margin-left:-15px;
 	
