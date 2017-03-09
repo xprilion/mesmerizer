@@ -5,6 +5,36 @@ body, html {
     line-height: 1.8;
 }
 
+body {
+	background: #141E30; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #141E30 , #243B55); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #141E30 , #243B55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+	#menu{
+		background: transparent;
+	}
+	
+	#menu div{
+		background: transparent;
+	}
+	
+	.psuedopanel{
+		background: transparent;
+		width: 24.99999%;
+	}
+	
+	.width0{
+		width: 0px;
+	}
+	
+	.width100{
+		width: 100%;
+	}
+	
+	.menupanel{
+		transition: width 0.5s linear;
+	}
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
