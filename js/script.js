@@ -1,3 +1,12 @@
+$.fn.extend({
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+    }
+});
+
 var state=1;
 var now=1;
 
@@ -32,24 +41,33 @@ $(document).ready(function(){
 	
     $("#menubar").click(function(){
         
-		if(!menuopen){
+		if(!menuopen){ // If the menu is not open
 			$("#menu").show();
 			$('.menupanel').each(function(){
-				$(this).removeClass('width0').addClass('width100');
+				$(this).removeClass('animated flipOutY');
+				$(this).animateCss('flipInY');
 			});
+			$('#menubutton').addClass('is-active');
 			menuopen=1;
 		}
-		else{
-			$('.menupanel').each(function(){
-				$(this).removeClass('width100').addClass('width0');
-			});
+		else{ //If the menu is already open
+			$('#menubutton').removeClass('is-active');
 			
+			$('.menupanel').each(function(){
+				$(this).removeClass('animated flipInY');
+				$(this).animateCss('flipOutY');
+			});
+
 			setTimeout(function(){
 				$("#menu").hide();
 			}, 550);
+		
 			menuopen=0;
 		}
     });
+	
+	myMap();
+	
 });
 
 function myMap() {

@@ -6,31 +6,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/fa/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/hamburgers.min.css">
+
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 	<div class="w3-display-topleft" id="menubar" style="margin-left:20px;margin-top:20px;z-index:1000;">
-		<div style="border-radius:5px;background-color:white;box-shadow:5px 5px 5px black;border-top:1px solid grey;border-left:1px solid grey;">
+		<!---
+		<div id="menuroot">
 			<i class="fa fa-bars" style="font-size:30px;color:black;padding:15px;"></i>
 		</div>
+		-->
+		
+		<button class="hamburger hamburger--vortex" id="menubutton" type="button">
+		  <span class="hamburger-box">
+			<span class="hamburger-inner"></span>
+		  </span>
+		</button>
 	</div>
 	
 <!-- Menubar -->
-<div id="menu" class="w3-white" style="display:none;position:fixed;top:0px;width:100%;height:100%;z-index:999;">
+<div id="menu" style="display:none;position:fixed;top:0px;width:100%;height:100%;z-index:999;">
 	<div class="w3-row w3-text-white">
-		<div class="w3-col l3 psuedopanel">
-			<div class="width0 menupanel w3-black" style="height:100vh;">Hello 1</div>
-		</div>
-		<div class="w3-col l3 psuedopanel">
-			<div class="width0 menupanel w3-black" style="height:100vh;">Hello 1</div>
-		</div>
-		<div class="w3-col l3 psuedopanel">
-			<div class="width0 menupanel w3-black" style="height:100vh;">Hello 1</div>
-		</div>
-		<div class="w3-col l3 psuedopanel">
-			<div class="width0 menupanel w3-black" style="height:100vh;">Hello 1</div>
-		</div>
-		
+		<div class="w3-col l3 m3 menupanel" style="height:100vh;">Hello 1</div>
+		<div class="w3-col l3 m3 menupanel" style="height:100vh;">Hello 1</div>
+		<div class="w3-col l3 m3 menupanel" style="height:100vh;">Hello 1</div>
+		<div class="w3-col l3 m3 menupanel" style="height:100vh;">Hello 1</div>
 	</div>
 </div>
 
