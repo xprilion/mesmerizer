@@ -38,11 +38,16 @@ $(document).ready(function(){
         $("#gallery").slideToggle("slow");
     });
 	
+	$('#menuholder').slick({
+	  speed: 500
+	});
+	
 	
     $("#menubar").click(function(){
         
 		if(!menuopen){ // If the menu is not open
 			$("#menu").show();
+			$('#menuholder').removeClass('animated zoomOutLeft').addClass('animated zoomInLeft');
 			$('.menupanel').each(function(){
 				$(this).removeClass('animated flipOutY');
 				$(this).animateCss('flipInY');
@@ -52,7 +57,7 @@ $(document).ready(function(){
 		}
 		else{ //If the menu is already open
 			$('#menubutton').removeClass('is-active');
-			
+			$('#menuholder').removeClass('animated zoomInLeft').addClass('animated zoomOutLeft');
 			$('.menupanel').each(function(){
 				$(this).removeClass('animated flipInY');
 				$(this).animateCss('flipOutY');
