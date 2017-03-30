@@ -92,3 +92,21 @@ div.btnbg {
     top:0;
 }
 
+.menuli{
+	text-align: right;
+	cursor: pointer;
+}
+
+.menuli:hover{
+	text-shadow: 0px 0px 50px #fff;
+}
+
+#menuholder, .menuholi{
+	position: fixed;
+	top: 10vh;
+	bottom: 10vh;
+	right: 10vw;
+	left: 35vw;
+	background: #00f;
+	z-index: 999999;
+}
