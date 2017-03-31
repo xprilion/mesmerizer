@@ -93,15 +93,33 @@ div.btnbg {
 }
 
 .menuli{
+	color: #fff;
 	text-align: right;
-	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.25s linear;
+	display: block;
 }
 
 .menuli:hover{
 	text-shadow: 0px 0px 50px #fff;
+	transition: all 0.25s linear;
 }
 
-#menuholder, .menuholi{
+
+.menuliActive{
+	color: #1288ff;
+	text-align: right;
+	text-decoration: none;
+	transition: all 0.25s linear;
+	display: block;
+}
+
+.menuliActive:hover{
+	text-shadow: 0px 0px 50px #1288ff;
+	transition: all 0.25s linear;
+}
+
+.menuholi{
 	position: fixed;
 	top: 10vh;
 	bottom: 10vh;
@@ -109,4 +127,6 @@ div.btnbg {
 	left: 35vw;
 	background: #00f;
 	z-index: 999999;
+	display: none;
 }
+
