@@ -7,6 +7,7 @@ $.fn.extend({
     }
 });
 
+var $root = $('html, body');
 var state=1;
 var now=1;
 
@@ -29,25 +30,66 @@ var run = function(){
   }
 }
 
+var menuNow=0;
+var menuInit=0;
+function menuPort(x){
+	
+	if(menuInit){
+		if(menuPort!=x){
+			menuUnPort(menuNow);
+			$('#menuholi'+x).show();
+			$('#menuli'+x).removeClass('menuli').addClass('menuliActive');
+			$('#menuholi'+x).removeClass('animated zoomOutRight').addClass('animated zoomInLeft');
+			menuNow=x;
+		}
+	}
+	else{
+		menuInit=1;
+		$('#menuholi'+x).show();
+		$('#menuli'+x).removeClass('menuli').addClass('menuliActive');
+		$('#menuholi'+x).removeClass('animated zoomOutRight').addClass('animated zoomInLeft');
+		menuNow=x;
+	}
+}
+
+function menuUnPort(x){
+	if(menuPort!=x){
+		$('#menuli'+x).removeClass('menuliActive').addClass('menuli');
+		$('#menuholi'+x).removeClass('animated zoomInLeft').addClass('animated zoomOutRight');
+		$('#menuholi'+x).hide();
+	}
+}
+
 var menuopen=0;
 $(document).ready(function(){
 	
 	particlesJS.load('home', 'js/particles-home.json');
 	
-	$("#load").click(function(){
-        $("#gallery").slideToggle("slow");
-    });
-	
-	$('#menuholder').slick({
-	  speed: 500
+	$(".menuli").click(function(event) {
+	   event.preventDefault();
+	   
+	   $('#menubar').click();
+	   
+	   var url = $(this).attr("href");
+
+	   setTimeout(function() {
+			$root.animate({
+				scrollTop: $('[name="' + url.substr(1) + '"]').offset().top
+			}, 500, function () {
+				window.location.hash = url;
+			});
+	   }, 250);
 	});
 	
-	
+	$("#load").click(function(){
+        $("#gallery-hid").slideToggle("slow");
+    });
+
     $("#menubar").click(function(){
         
 		if(!menuopen){ // If the menu is not open
 			$("#menu").show();
-			$('#menuholder').removeClass('animated zoomOutLeft').addClass('animated zoomInLeft');
+			menuPort(menuNow);
 			$('.menupanel').each(function(){
 				$(this).removeClass('animated flipOutY');
 				$(this).animateCss('flipInY');
@@ -57,12 +99,14 @@ $(document).ready(function(){
 		}
 		else{ //If the menu is already open
 			$('#menubutton').removeClass('is-active');
-			$('#menuholder').removeClass('animated zoomInLeft').addClass('animated zoomOutLeft');
+			$('#menuholi'+menuNow).removeClass('animated zoomInLeft').addClass('animated zoomOutRight');
+			$('#menuholi'+menuNow).hide();
+			menuInit=0;
+			
 			$('.menupanel').each(function(){
 				$(this).removeClass('animated flipInY');
 				$(this).animateCss('flipOutY');
 			});
-
 			setTimeout(function(){
 				$("#menu").hide();
 			}, 550);
