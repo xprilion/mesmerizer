@@ -27,6 +27,10 @@ body {
 		outline: none;
 	}
 	
+#about div{
+	font-family: sans-serif;
+}
+	
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4,.bgimg-6 {
     background-attachment: fixed;
