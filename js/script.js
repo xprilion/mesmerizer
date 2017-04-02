@@ -62,8 +62,7 @@ function menuUnPort(x){
 
 var menuopen=0;
 $(document).ready(function(){
-	
-	particlesJS.load('home', 'js/particles-home.json');
+	particlesJS.load('homeplace', 'js/particles-home.json');
 	
 	$(".menuli").click(function(event) {
 	   event.preventDefault();
