@@ -13,57 +13,16 @@
 <script src="js/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("#rule1").click(function(){
-        $("#show1").slideToggle("slow");
-    });
-    $("#rule2").click(function(){
-        $("#show2").slideToggle("slow");
-    });
-	$("#rule3").click(function(){
-        $("#show3").slideToggle("slow");
-    });
-	$("#rule4").click(function(){
-        $("#show4").slideToggle("slow");
-    });
-	$("#rule5").click(function(){
-        $("#show5").slideToggle("slow");
-    });
-	$("#rule6").click(function(){
-        $("#show6").slideToggle("slow");
-    });
-	$("#rule7").click(function(){
-        $("#show7").slideToggle("slow");
-    });
-	$("#rule8").click(function(){
-        $("#show8").slideToggle("slow");
-    });
-	$("#rule9").click(function(){
-        $("#show9").slideToggle("slow");
-    });
-	$("#rule10").click(function(){
-        $("#show10").slideToggle("slow");
-    });
-	$("#rule11").click(function(){
-        $("#show11").slideToggle("slow");
-    });
-	$("#rule12").click(function(){
-        $("#show12").slideToggle("slow");
-    });
-	$("#rule13").click(function(){
-        $("#show13").slideToggle("slow");
-    });
-	$("#rule14").click(function(){
-        $("#show14").slideToggle("slow");
-    });
-	$("#rule15").click(function(){
-        $("#show15").slideToggle("slow");
+    $(".ruleButton").click(function(){
+		var which=$(this).attr('to');
+        $("#show"+which).slideToggle("slow");
     });
 });
 </script>
 </head>
 <body>
 <!-- Top for large -->	
-	<div class="w3-green w3-xxlarge w3-center w3-display-container w3-hide-small w3-hide-medium" style="height:10vh;">
+	<div class="w3-green w3-xxlarge w3-center w3-display-container w3-hide-small w3-hide-medium w3-top" style="height:10vh;">
 			<div class="w3-display-middle" style="text-decoration:none;"><a href="index.html">EVENTS</a></div>
 	</div>
 
@@ -77,7 +36,7 @@ $(document).ready(function(){
 		</div>
 	</div>
 <!-- Sidebar for large -->
-	<div class="w3-row" style="height:90vh;width:100%;">
+	<div class="w3-row" style="height:90vh;width:100%;position: fixed; margin-top: 10vh;">
 		<div class="w3-col l3 w3-light-grey w3-hide-small" >
 			<div class="w3-padding xxlarge w3-container w3-white" style="height: 30vh;">Literary</div>
 			<div class="w3-padding xxlarge w3-container w3-light-blue" style="height: 30vh;">Literary</div>
@@ -88,11 +47,11 @@ $(document).ready(function(){
 			<div class="w3-button w3-center w3-col s4 w3-grey">Literary</div>
 			<div class="w3-button w3-right w3-col s4 w3-black">Photography</div>		
 		</div>
-		<div class="w3-col l9 w3-row-padding w3-container" style="backgroubd: blue">
+		<div class="w3-col l9 w3-row-padding w3-container" style="height: 90vh;overflow-y: auto;">
 			<div class="w3-col l6 m4 s12 w3-margin-top">
-				<div class="w3-white w3-center w3-xlarge">SPEAK IT OUT</div>
-				<div class="w3-light-grey w3-large"><div class="w3-center">Debate <br> Some discription will be here<br> 
-					<div class="w3-button w3-black" id="rule1">+ Rules</div><br><br></div>
+				<div class="w3-white w3-center w3-xlarge w3-padding-16">SPEAK IT OUT</div>
+				<div class="w3-light-grey w3-large"><div class="w3-center">Debate <br> Some discription will be here<br><br>
+					<div class="w3-button w3-black ruleButton" to="1">+ Rules</div><br><br></div>
 					<div class=" w3-padding" id="show1" style="display:none;background-color:#dadada">
 						1) 2 participants in each team.<br>
 						2) 3 rounds in the event. <br>
@@ -104,343 +63,20 @@ $(document).ready(function(){
 						5) Disqualification- Offensive or Inappropriate language,crossing the time limit.
 					</div>
 				</div>
-				<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-			</div>
-			<div class="w3-col l6 m4 s12 w3-margin-top">
-				<div class="w3-white w3-container w3-center w3-xlarge">SPEAK IT OUT</div>
-				<div class="w3-light-grey w3-large">
-					<div class="w3-center">Debate <br> Some discription will be here<br> 
-						<div class="w3-button w3-black" id="rule1">+ Rules</div>
-						<br><br>
+				<div class="w3-padding-8 w3-padding w3-text-black w3-row-padding" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">
+					<div class="w3-white w3-center w3-large" style="padding: 4px; display:inline-block;white-space: nowrap; line-height: 2vh; border-radius: 1000px;">
+						<div class="w3-right" style="height: 5vh; padding: 0px 1vh; display: inline-block; line-height: 1.8; bottom: -0.2vh">Amish</div>
+						<div style="height:5vh;display:inline-block;"><img src="img/team/amish.jpg" style="width: 5vh; border-radius: 1000px; margin-bottom: -1.7vh"></div>
 					</div>
-					<div class=" w3-padding" id="show1" style="display:none;background-color:#dadada">
-						1) 2 participants in each team.<br>
-						2) 3 rounds in the event. <br>
-						ROUND 1- Participant will have to speak for the motion.<br>
-						Round 2- Participant will have to speak against the motion.<br>
-						Round 3 - Rebuttal between the teams(2+2mins)<br>
-						3) Topics for round 1 and 2 will be given on the spot.<br>
-						4) Only the topic for the 3rd round will be declared by the organizing committee and will be declared sometime prior to the event.<br>
-						5) Disqualification- Offensive or Inappropriate language,crossing the time limit.
+					<div class="w3-white w3-center w3-large" style="padding: 4px; display:inline-block;white-space: nowrap; line-height: 2vh; border-radius: 1000px;">
+						<div class="w3-right" style="height: 5vh; padding: 0px 1vh; display: inline-block; line-height: 1.8; bottom: -0.2vh">Amish</div>
+						<div style="height:5vh;display:inline-block;"><img src="img/team/amish.jpg" style="width: 5vh; border-radius: 1000px; margin-bottom: -1.7vh"></div>
 					</div>
 				</div>
-				<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
 			</div>
+			
 		</div>
 	</div>
 <!-- Bars for small -->	
-	
-	<br>
-<!-- Events list -->
-<br>
-	<div class="w3-row w3-container">
-		<div class="w3-col l3 m3"> &nbsp;</div>
-		
-		<div class="w3-col l1 m1"> &nbsp;</div>
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">DO YOU KNOW</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center"> Quiz <br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule2">+ Rules</div><br><br></div>
-				<div class=" w3-padding" id="show2" style="display:none;background-color:#dadada">
-1) 2 participants in each team.<br>
-2) There will be an elimination round if there are more than 10 teams registering.<br>
-3) Quiz will be held on topic - Kolkata.<br>
-4) All rounds will be explained during the events.<br>
-5) Disqualification will be made based on the quiz master’s discretion.
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-	</div>	
-	<br>
-	<div class="w3-row w3-container">
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">FLIGHT OF FANCY</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center">Creative writing<br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule3">+ Rules</div><br><br></div>
-				<div class=" w3-padding" id="show3" style="display:none;background-color:#dadada">
-1) Theme will be given on the spot.<br>
-2) Time limit - 1 hour<br>
-3) Word count- 500<br>
-4) The time used by the participant in planning or framing the outline is included within the time allotted.<br>
-5) Any use of offensive language,inappropriate content, controversial sentiments will result to direct disqualification.<br>
-6) The judging criteria will be based on the following- story line, innovation, style of writing, originality, vocabulary and wit.<br>
- 
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-		<div class="w3-col l2 m2"> &nbsp;</div>
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">EMULSION</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center"> Face Painting <br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule4">+ Rules</div><br><br></div>
-				<div class="w3-padding" id="show4" style="display:none;background-color:#dadada;">
-1) The theme will be given 5mins prior to the event.<br>
-2) The teams can only use colour to paint on the faces.<br>
-3) A brief verbal explanation by any one of the team member relating to the the work and theme is expected.<br>
-4) Usage of mobile phones,pictures or any sort of reference material will not be allowed and will lead to immediate disqualification.<br>
-5) Obscenity of any kind is prohibited.<br>
-6) The decision of the judges are final and binding.<br>
-7) The judging criteria involves: Appearance, Innovation, Theme work.<br>
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-	</div> <br>
-	<div class="w3-row w3-container">
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">DESI SE HIP-HOP THUMKE</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center">Western Thumke<br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule5">+ Rules</div><br><br></div>
-				<div class=" w3-padding" id="show5" style="display:none;background-color:#dadada">
-1) Teams can perform any sequence of their choice which remains true from bollywood to Hip-Hop,covering up both the segments.<br>
-2) Time limits 6+2 mins(1min set up time).<br>
-3) Team size 6-10 dancers.<br>
-4) One team per college.<br>
-5) Usage of more than one song is mandatory.<br>
-6) Teams should bring their tracks only in pen-drives which must be submitted to the console 1 hour prior to the competition.<br>
-7) Any kind of obscene acts would lead to immediate disqualification.<br>
-8) The judging criteria includes:: choreography, Energy, Expressions, Costumes, Overall impact.<br>
-9) The decision of the judges are final and binding.<br>
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-		<div class="w3-col l2 m2"> &nbsp;</div>
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">NRITIYA</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center"> Eastern Dance <br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule6">+ Rules</div><br><br></div>
-				<div class="w3-padding" id="show6" style="display:none;background-color:#dadada;">
-1) Team size - 5-7 dancers per team.<br>
-2) One team per college.<br>
-3) Time limit: 5+2 mins (1 min for stage set up)<br>
-4) Songs should be strictly classical.<br>
-5) Obscenity of any kind is not allowed and will result to immediate disqualification.<br>
-6) The judging criteria: Choreography, Presentation, Coordination,Clarity.<br>
-7) The decision of the judges are final and binding.<br>
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-	</div><br>
-	<div class="w3-row w3-container">
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">CAVORT</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center">Impromptu Dance<br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule7">+ Rules</div><br><br></div>
-				<div class=" w3-padding" id="show7" style="display:none;background-color:#dadada">
-1) 1 participant per college.<br>
-2) Participants must be ready to dance in any track.<br>
-3) The event will have 2 rounds.<br>
-4) Time- 1st round- 2mins , 2nd round- 3mins.<br>
-5) The event will be rolled out on face of basis.<br>
-6) Any style of dance is appreciated.<br>
-7) The competition will have elimination rounds as per participant strength.<br>
-8) The participants must adhere to the time limits.<br>
-9) Obscenity or any involvements as such is not allowed and will result to disqualification.<br>
-10) The judging criteria involves: Choreography, Energy, Innovation, Impact.<br>
-11) The decision of the judges are final and binding.<br>
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-		<div class="w3-col l2 m2"> &nbsp;</div>
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">AAGAAZ</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center"> Street Play <br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule8">+ Rules</div><br><br></div>
-				<div class="w3-padding" id="show8" style="display:none;background-color:#dadada;">
-1) Team size- 6-10 members per team<br>
-2) Time limit- 6+2 mins.<br>
-3) Teams must mention their theme of approach prior to performance .<br>
-4) 1 team per college.<br>
-5) The essence of the play must be brought out in English, Hindi or Bengali(Shot snippets from other regional languages are also allowed)<br>
-6) Live music is allowed.<br>
-7) Teams must adhere to the time limit.<br>
-8) Obscenity of any kind is not allowed and will result in immediate disqualification.<br>
-9) The judging criteria involves : Acting ( Facial Expression, Body movements) , Voice(Sync,modulation, dictation).<br>
-10) No electrical appliances can be used during performace.<br>
-11) The decision of the judges are final binding.<br>
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-	</div><br>
-	<div class="w3-row w3-container">
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">RAZZMATAZZ</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center">Fashion Show<br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule9">+ Rules</div><br><br></div>
-				<div class=" w3-padding" id="show9" style="display:none;background-color:#dadada">
-1) Open Theme.<br>
-2) Time limits: 8-10 mins( Includes the set up time)<br>
-3) Participants- 10-12( 1 person to handle the track)<br>
-4) One team per college.<br>
-5) The time limits must be strictly adhered to.<br>
-6) Usage of props of props are allowed.<br>
-7) Light and sound improvisation must be informed to the organizers prior to the competition.<br>
-8) Obscenity or vulgarity at any instance will not be allowed. The usage of such will lead to immediate disqualification. <br>
-9) Any kind of fluid , inflammable is not allowed on stage.<br>
-10) The judging criteria involves : Innovation,choreography, costumes and props, ramp walk, theme, styling and make-up and overall impact.<br>
-11) The decision of the judges are final and binding.<br>
- 
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-		<div class="w3-col l2 m2"> &nbsp;</div>
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">SAARANG</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center"> Solo Singing <br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule10">+ Rules</div><br><br></div>
-				<div class="w3-padding" id="show10" style="display:none;background-color:#dadada;">
-1) The languages of the song must be English, Hindi or Bengali.<br>
-2) Time:5+1 mins.<br>
-3) Pre-recorded tracks are not allowed.<br>
-4) Accompanist will be allowed.<br>
-5) The participants must strictly adhere to the time limits.<br>
-6) A maximum of 2 participants from each college.<br>
-7) The judging criteria involves : choice of songs, quality of the voice, crowd reaction, stage presence and overall impact.<br>
-8) The decesion of the judges are final and binding.<br>
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-	</div><br>
-	<div class="w3-row w3-container">
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">A MINUTE TO WIN IT</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center">&nbsp;<br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule11">+ Rules</div><br><br></div>
-				<div class=" w3-padding" id="show11" style="display:none;background-color:#dadada">
-1) Participants must strictly adhere to the time limit.<br>
-2) Any kind of performance can be showcased.<br>
-3) 1 participant per college.<br>
-4) Participant must carry their own props and things.<br>
-5) The audio tracks(if any) should be brought in a pen-drive,cell phones are not allowed.<br>
-6) Any kind of inflammable substances or any thing like that will not be allowed during the performances.<br>
-7) The judging criteria involves: 	Performance,innovation,prop-usage,the x-factor,crowd reaction and overall impact.<br>
-8) The decision of the judges are final and binding.<br>
-
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-		<div class="w3-col l2 m2"> &nbsp;</div>
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">BEAT-O-BUG</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center"> Western Band <br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule12">+ Rules</div><br><br></div>
-				<div class="w3-padding" id="show12" style="display:none;background-color:#dadada;">
-1) Time limit :8+1 minutes.(1min extra for sound check) <br>
-2) Teams are requested to strictly adhere to the time limit.<br>
-3) 1 team per college.<br>
-4) Bands can perform anything of their choice or anything in relation to the western genre.<br>
-5) Judging criteria will be completely based on Song structure, Originality, Stage presence and Crowd Interaction.<br>
-6) The decision of the judge stands final in all cases.<br>
-7)  Any inappropriate content or obscenity may lead to immediate disqualification.<br>
-8)  The organizing team reserves the right to change or modify any of the rules.<br>
- 
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-	</div><br>
-	<div class="w3-row w3-container">
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">ANTAKSHARI</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center">&nbsp;<br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule13">+ Rules</div><br><br></div>
-				<div class=" w3-padding" id="show13" style="display:none;background-color:#dadada">
-1) 1 team per college<br>
-2) 2 participants per team.<br>
-3) There will be  an elimination round if there are more than 10 teams participating.<br>
-4) The rules will be revealed on the spot prior to the event.<br>
-5) The decision of the judges are final and binding.<br>
-
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-		<div class="w3-col l2 m2"> &nbsp;</div>
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">FIND IT</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center"> Treasure Hunt <br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule14">+ Rules</div><br><br></div>
-				<div class="w3-padding" id="show14" style="display:none;background-color:#dadada;">
-1) 2 participants per team.<br>
-2) Rules will be revealed on the spot.<br>
-3) More than one 1 team can participate from a particular college.<br>
-4) On-spot entries are allowed.<br>
-5) The decision of the judges are final and binding.<br>
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-	</div><br>
-		<div class="w3-row w3-container">
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">SHUTTERBUG</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center">Photography<br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule15">+ Rules</div><br><br></div>
-				<div class=" w3-padding" id="show15" style="display:none;background-color:#dadada">
-1) The topic will be revealed through our Facebook page sometime prior to the event.<br>
-2) Only DSLR cameras are allowed.<br>
-3) No form of editing is allowed(except minimal cropping)<br>
-4) The participants have to submit the entries by 16th april  3pm at nsec.mesmerizer17official@gmail.com.<br>
-5) 1 participant per college.<br>
-6) The judging criteria involves: content,creativity,relevance to the theme.<br>
-7) The decision of the judges are final and binding.<br>
-
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-		<div class="w3-col l2 m2"> &nbsp;</div>
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">&nbsp;</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center"> Treasure Hunt <br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule16">+ Rules</div><br><br></div>
-				<div class="w3-padding" id="show16" style="display:none;background-color:#dadada;">
-1) 2 participants per team.<br>
-2) Rules will be revealed on the spot.<br>
-3) More than one 1 team can participate from a particular college.<br>
-4) On-spot entries are allowed.<br>
-5) The decision of the judges are final and binding.<br>
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
-	</div><br>
 </body>
 </html>
