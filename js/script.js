@@ -116,13 +116,37 @@ $(document).ready(function(){
 	
 	myMap();
 	
+	var offset = 220;
+    var duration = 500;
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > offset) {
+            $('.back-to-top').fadeIn(duration);
+        } else {
+            $('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    $('.back-to-top').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+	
 });
 
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
 function myMap() {
-				  var myCenter = new google.maps.LatLng(22.475730, 88.414632);
-				  var mapCanvas = document.getElementById("map");
-				  var mapOptions = {center: myCenter, zoom: 16};
-				  var map = new google.maps.Map(mapCanvas, mapOptions);
-				  var marker = new google.maps.Marker({position:myCenter});
-				  marker.setMap(map);
-				}
+	var myCenter = new google.maps.LatLng(22.475730, 88.414632);
+	var mapCanvas = document.getElementById("map");
+	var mapOptions = {center: myCenter, zoom: 16};
+	var map = new google.maps.Map(mapCanvas, mapOptions);
+	var marker = new google.maps.Marker({position:myCenter});
+	marker.setMap(map);
+}
