@@ -63,7 +63,7 @@ $(document).ready(function(){
 </head>
 <body>
 <!-- Top for large -->	
-	<div class="w3-green w3-xxlarge w3-center w3-display-container w3-hide-small w3-hide-medium w3-top" style="height:10vh;">
+	<div class="w3-green w3-xxlarge w3-center w3-display-container w3-hide-small w3-hide-medium" style="height:10vh;">
 			<div class="w3-display-middle" style="text-decoration:none;"><a href="index.html">EVENTS</a></div>
 	</div>
 
@@ -77,42 +77,65 @@ $(document).ready(function(){
 		</div>
 	</div>
 <!-- Sidebar for large -->
-	<div class="w3-row w3-hide-small ">
-		<div class="w3-col l2 w3-light-grey" style="height:90vh;position:fixed;margin-top:10vh;">
-			<div class="w3-grey w3-padding xxlarge">Literary</div>
-		
+	<div class="w3-row" style="height:90vh;width:100%;">
+		<div class="w3-col l3 w3-light-grey w3-hide-small" >
+			<div class="w3-padding xxlarge w3-container w3-white" style="height: 30vh;">Literary</div>
+			<div class="w3-padding xxlarge w3-container w3-light-blue" style="height: 30vh;">Literary</div>
+			<div class="w3-padding xxlarge w3-container w3-light-green" style="height: 30vh;">Literary</div>
+		</div>
+		<div class="w3-block w3-row w3-hide-medium w3-hide-large">
+			<div class="w3-button w3-left w3-col s4 w3-black">Cultural</div>
+			<div class="w3-button w3-center w3-col s4 w3-grey">Literary</div>
+			<div class="w3-button w3-right w3-col s4 w3-black">Photography</div>		
+		</div>
+		<div class="w3-col l9 w3-row-padding w3-container" style="backgroubd: blue">
+			<div class="w3-col l6 m4 s12 w3-margin-top">
+				<div class="w3-white w3-center w3-xlarge">SPEAK IT OUT</div>
+				<div class="w3-light-grey w3-large"><div class="w3-center">Debate <br> Some discription will be here<br> 
+					<div class="w3-button w3-black" id="rule1">+ Rules</div><br><br></div>
+					<div class=" w3-padding" id="show1" style="display:none;background-color:#dadada">
+						1) 2 participants in each team.<br>
+						2) 3 rounds in the event. <br>
+						ROUND 1- Participant will have to speak for the motion.<br>
+						Round 2- Participant will have to speak against the motion.<br>
+						Round 3 - Rebuttal between the teams(2+2mins)<br>
+						3) Topics for round 1 and 2 will be given on the spot.<br>
+						4) Only the topic for the 3rd round will be declared by the organizing committee and will be declared sometime prior to the event.<br>
+						5) Disqualification- Offensive or Inappropriate language,crossing the time limit.
+					</div>
+				</div>
+				<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
+			</div>
+			<div class="w3-col l6 m4 s12 w3-margin-top">
+				<div class="w3-white w3-container w3-center w3-xlarge">SPEAK IT OUT</div>
+				<div class="w3-light-grey w3-large">
+					<div class="w3-center">Debate <br> Some discription will be here<br> 
+						<div class="w3-button w3-black" id="rule1">+ Rules</div>
+						<br><br>
+					</div>
+					<div class=" w3-padding" id="show1" style="display:none;background-color:#dadada">
+						1) 2 participants in each team.<br>
+						2) 3 rounds in the event. <br>
+						ROUND 1- Participant will have to speak for the motion.<br>
+						Round 2- Participant will have to speak against the motion.<br>
+						Round 3 - Rebuttal between the teams(2+2mins)<br>
+						3) Topics for round 1 and 2 will be given on the spot.<br>
+						4) Only the topic for the 3rd round will be declared by the organizing committee and will be declared sometime prior to the event.<br>
+						5) Disqualification- Offensive or Inappropriate language,crossing the time limit.
+					</div>
+				</div>
+				<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
+			</div>
 		</div>
 	</div>
 <!-- Bars for small -->	
-	<div class="w3-block w3-row">
-		<div class="w3-button w3-left w3-col s4 w3-black">Cultural</div>
-		<div class="w3-button w3-center w3-col s4 w3-grey">Literary</div>
-		<div class="w3-button w3-right w3-col s4 w3-black">Photography</div>		
-	</div>
+	
 	<br>
 <!-- Events list -->
 <br>
 	<div class="w3-row w3-container">
 		<div class="w3-col l3 m3"> &nbsp;</div>
-		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
-			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">SPEAK IT OUT</div>
-			
-			<div class="w3-light-grey w3-large"><div class="w3-center">Debate <br> Some discription will be here<br> 
-				<div class="w3-button w3-black" id="rule1">+ Rules</div><br><br></div>
-				<div class=" w3-padding" id="show1" style="display:none;background-color:#dadada">
-1) 2 participants in each team.<br>
-2) 3 rounds in the event. <br>
-ROUND 1- Participant will have to speak for the motion.<br>
-Round 2- Participant will have to speak against the motion.<br>
-Round 3 - Rebuttal between the teams(2+2mins)<br>
-3) Topics for round 1 and 2 will be given on the spot.<br>
-4) Only the topic for the 3rd round will be declared by the organizing committee and will be declared sometime prior to the event.<br>
-5) Disqualification- Offensive or Inappropriate language,crossing the time limit.
-
-				</div>
-			</div>
-			<div class="w3-large w3-center w3-text-black" style="background-color:#b1b1b1;text-shadow:1px 1px 1px white;">Amrita<br> &nbsp;</div>
-		</div>
+		
 		<div class="w3-col l1 m1"> &nbsp;</div>
 		<div class="w3-card-8 w3-col l4 m4 s12 w3-round">
 			<div class="w3-white w3-container w3-center w3-xlarge w3-padding">DO YOU KNOW</div>
