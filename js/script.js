@@ -82,6 +82,7 @@ $(document).ready(function(){
 	
 	$("#load").click(function(){
         $("#gallery-hid").slideToggle("slow");
+		$(this).fadeOut("slow");
     });
 
     $("#menubar").click(function(){
