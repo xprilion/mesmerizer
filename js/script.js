@@ -142,6 +142,10 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
+function profile(el){
+	alert($(el).attr('alt'));
+}
+
 
 function myMap() {
 	var myCenter = new google.maps.LatLng(22.475730, 88.414632);

@@ -45,7 +45,7 @@ body {
 .bgimg-1 {
     background-image: url("../img/poster1.jpg");
     width: 100%;
-	background-position-y: 80%;
+	background-position-y: 82%;
 }
 
 /* Second image (Portfolio) */
@@ -151,3 +151,16 @@ div.btnbg {
 .back-to-top:hover {    
     background-color: rgba(135, 135, 135, 0.50);
 }
+
+.team0{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#team1{background-image: url('../img/team/ac.jpg');}
+#team2{background-image: url('../img/team/db.jpg');}
+#team3{background-image: url('../img/team/ss.jpg');}
+#team4{background-image: url('../img/team/as2.jpg');}
+#team5{background-image: url('../img/team/as3.jpg');}
+#team6{background-image: url('../img/team/vk.jpg');}
