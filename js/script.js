@@ -64,7 +64,7 @@ var menuopen=0;
 $(document).ready(function(){
 	particlesJS.load('homeplace', 'js/particles-home.json');
 	
-	$(".menuli").click(function(event) {
+	$(".hashlink").click(function(event) {
 	   event.preventDefault();
 	   
 	   $('#menubar').click();
