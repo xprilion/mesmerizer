@@ -38,12 +38,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-	min-height: 100vh;
+	height: 100vh;
 }
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url("../img/poster1.jpg");
+    background-image: url("../img/poster5.jpg");
     width: 100%;
 	background-position-y: 82%;
 }
@@ -164,3 +164,11 @@ div.btnbg {
 #team4{background-image: url('../img/team/as2.jpg');}
 #team5{background-image: url('../img/team/as3.jpg');}
 #team6{background-image: url('../img/team/vk.jpg');}
+
+#mesmText{
+	background-image: url('../img/mesmText.png');
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 10vh;
+}
