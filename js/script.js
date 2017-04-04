@@ -117,7 +117,7 @@ $(document).ready(function(){
 	
 	myMap();
 	
-	var offset = 220;
+	var offset = 400;
     var duration = 500;
     $(window).scroll(function() {
         if ($(this).scrollTop() > offset) {
