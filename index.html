@@ -25,13 +25,13 @@
 	<div class="w3-row">
 		<div class="w3-col l3 m3 menupanel w3-hide-small w3-display-container" style="height:100vh;">
 			<div class="w3-display-right w3-xxlarge">
-				<a class="menuli" onmouseover="menuPort(0);" id="menuli0" href="#home">Home</a>
-				<a class="menuli" onmouseover="menuPort(1);" id="menuli1" href="#about">About</a>
+				<a class="menuli hashlink" onmouseover="menuPort(0);" id="menuli0" href="#home">Home</a>
+				<a class="menuli hashlink" onmouseover="menuPort(1);" id="menuli1" href="#about">About</a>
 				<!---<a class="menuli" onmouseover="menuPort(2);" id="menuli2" href="#sponsors">Sponsors</a>-->
-				<a class="menuli" onmouseover="menuPort(3);" id="menuli3" href="#events">Events</a>
-				<a class="menuli" onmouseover="menuPort(4);" id="menuli4" href="#gallery">Gallery</a>
-				<a class="menuli" onmouseover="menuPort(5);" id="menuli5" href="#team">Team</a>
-				<a class="menuli" onmouseover="menuPort(6);" id="menuli6" href="#contact">Contact</a>
+				<a class="menuli hashlink" onmouseover="menuPort(3);" id="menuli3" href="#events">Events</a>
+				<a class="menuli hashlink" onmouseover="menuPort(4);" id="menuli4" href="#gallery">Gallery</a>
+				<a class="menuli hashlink" onmouseover="menuPort(5);" id="menuli5" href="#team">Team</a>
+				<a class="menuli hashlink" onmouseover="menuPort(6);" id="menuli6" href="#contact">Contact</a>
 			</div>
 		</div>
 		<div class="w3-col l3 m3 menupanel w3-hide-small" style="height:100vh;">&nbsp;</div>
@@ -54,17 +54,25 @@
 			<div class="menuholi w3-center" id="menuholi5">
 				<img src="img/TeamCollage.jpg" style="height: 100%;" />
 			</div>
-			<div class="menuholi" id="menuholi6">Contact</div>
+			<div class="menuholi w3-display-container" id="menuholi6">
+				<img src="img/contactImage.png" style="width: 100%;" class="s3-display-middle" />
+				<div class="w3-xlarge w3-section w3-center">
+					<a href="https://facebook.com/mesmerizer.nsec"><i class="fa fa-2x fa-facebook-official w3-text-indigo"></i></a>
+					<a href="https://instagram.com/nsec.mesmerizer"><i class="fa fa-2x fa-instagram w3-text-purple"></i></a>
+					<a href="mailto:nsec.mesmerizer17official@gmail.com"><i class="fa fa-2x fa-envelope w3-text-red"></i></a>
+					
+				  </div>
+			</div>
 		</div>
 		
 		<div class="w3-col s12 menupanel w3-hide-medium w3-hide-large" style="height:10vh;">&nbsp;</div>
-		<div class="w3-col s12 menupanel w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;"><span class="w3-display-middle">Home</span></div>
-		<div class="w3-col s12 menupanel w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;"><span class="w3-display-middle">About</span></div>
-		<div class="w3-col s12 menupanel w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;"><span class="w3-display-middle">Events</span></div>
-		<div class="w3-col s12 menupanel w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;"><span class="w3-display-middle">Gallery</span></div>
-		<div class="w3-col s12 menupanel w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;"><span class="w3-display-middle">Team</span></div>
-		<div class="w3-col s12 menupanel w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;"><span class="w3-display-middle">Contact</span></div>
-		
+		<a class="w3-col s12 menupanel hashlink w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;" href="#home"><span class="w3-display-middle">Home</span></a>
+		<a class="w3-col s12 menupanel hashlink w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;" href="#about"><span class="w3-display-middle">About</span></a>
+		<a class="w3-col s12 menupanel hashlink w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;" href="#events"><span class="w3-display-middle">Events</span></a>
+		<a class="w3-col s12 menupanel hashlink w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;" href="#gallery"><span class="w3-display-middle">Gallery</span></a>
+		<a class="w3-col s12 menupanel hashlink w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;" href="#team"><span class="w3-display-middle">Team</span></a>
+		<a class="w3-col s12 menupanel hashlink w3-hide-medium w3-hide-large w3-xxlarge w3-display-container" style="height:15vh;" href="#contact"><span class="w3-display-middle">Contact</span></a>
+		</div>
 	</div>
 </div>
 
@@ -352,26 +360,23 @@
     <div class="w3-col l4 m4">
 		<div class='w3-white w3-border-bottom w3-border-grey w3-row'  style='height: 15vh; width: 100%;'>
 			<span class="w3-col s3 w3-red w3-center w3-display-container" style="height: 15vh;"><i class="w3-display-middle fa fa-3x fa-phone"></i></span>
-			<span class="w3-col s9 w3-center w3-display-container" style="height: 15vh; background: #fbb3ae !important;"><span class="w3-display-middle w3-xlarge" style="width: 100%;">+91-1234567890</span></span>
+			<span class="w3-col s9 w3-center w3-display-container" style="height: 15vh; background: #fbb3ae !important;"><span class="w3-display-middle w3-xlarge" style="width: 100%;">+91-8013464269</span></span>
 		</div>
 		<div class='w3-white w3-border-bottom w3-border-grey w3-row'  style='height: 15vh; width: 100%;'>
-			<span class="w3-col s3 w3-green w3-center w3-display-container" style="height: 15vh;"><i class="w3-display-middle fa fa-3x fa-map-marker"></i></span>
-			<span class="w3-col s9 w3-center w3-display-container"style="height: 15vh; background: #d1e7b7 !important;"><span class="w3-display-middle w3-xlarge" style="width: 100%;">Garia, Kolkata</span></span>
+			<span class="w3-col s3 w3-green w3-center w3-display-container" style="height: 15vh;"><i class="w3-display-middle fa fa-3x fa-facebook-square"></i></span>
+			<span class="w3-col s9 w3-center w3-display-container"style="height: 15vh; background: #d1e7b7 !important;"><span class="w3-display-middle w3-xlarge" style="width: 100%;">fb.com/mesmerizer.nsec</span></span>
 		</div>
 		<div class='w3-white w3-border-bottom w3-border-grey w3-row'  style='height: 15vh; width: 100%;'>
 			<span class="w3-col s3 w3-blue w3-center w3-display-container" style="height: 15vh;"><i class="w3-display-middle fa fa-3x fa-envelope"></i></span>
-			<span class="w3-col s9 w3-center w3-display-container"style="height: 15vh; background:#a6d4fa !important;"><span class="w3-display-middle w3-xlarge" style="width: 100%;">mesmerizer@google.com</span></span>
+			<span class="w3-col s9 w3-center w3-display-container"style="height: 15vh; background:#a6d4fa !important;"><span class="w3-display-middle w3-hide-medium w3-large" style="width: 100%;">nsec.mesmerizer17official@gmail.com</span></span>
 		</div>
 		
 		<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off" style="height: 55vh;">
 		  <a href="#home" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
 		  <div class="w3-xlarge w3-section">
-			<i class="fa fa-facebook-official w3-hover-text-indigo"></i>
-			<i class="fa fa-instagram w3-hover-text-purple"></i>
-			<i class="fa fa-snapchat w3-hover-text-yellow"></i>
-			<i class="fa fa-pinterest-p w3-hover-text-red"></i>
-			<i class="fa fa-twitter w3-hover-text-light-blue"></i>
-			<i class="fa fa-linkedin w3-hover-text-indigo"></i>
+			<a href="https://facebook.com/mesmerizer.nsec"><i class="fa fa-2x fa-facebook-official w3-text-indigo"></i></a>
+			<a href="https://instagram.com/nsec.mesmerizer"><i class="fa fa-2x fa-instagram w3-text-purple"></i></a>
+			<a href="mailto:nsec.mesmerizer17official@gmail.com"><i class="fa fa-2x fa-envelope w3-text-red"></i></a>
 		  </div>
 		</footer>
     </div>
