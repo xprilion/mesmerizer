@@ -82,6 +82,7 @@ $(document).ready(function(){
 	
 	$("#load").click(function(){
         $("#gallery-hid").slideToggle("slow");
+		$(this).fadeOut("slow");
     });
 
     $("#menubar").click(function(){
@@ -139,6 +140,10 @@ function onClick(element) {
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
+}
+
+function profile(el){
+	alert($(el).attr('alt'));
 }
 
 
