@@ -142,8 +142,15 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
+var nums={mc: 9038758001,ya:7059817544,ap:8697072408,mb:8334095448,rg:9804462124,rc:7605820934,aa:8620888935,rl:8017645540,am:8981899484,sr:9831520646,sg1:9051296495,sg2:8900062728,tb:9051031627,ss1:9339230004,vh:8420183145,ss2:8420975760,rs:9804911112,as:"Unavailable",sg:"Unavailable"};
+
 function profile(el){
-	alert($(el).attr('alt'));
+	var who = $(el).attr('num');
+	document.getElementById("img01").src = "img/thumbs/"+who+".jpg";
+	document.getElementById("modal01").style.display = "block";
+	var captionText = document.getElementById("caption");
+	var name=$(el).find('.w3-right').text();
+	captionText.innerHTML = name+'<hr>'+nums[who];
 }
 
 
